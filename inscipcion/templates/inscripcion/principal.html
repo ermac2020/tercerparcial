@@ -1,10 +1,179 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="es" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <h1>Index</h1>
-  </body>
-</html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="description" content="Cleaner Landing page Template">
+   <title>Cleaner Landing Page </title>
+   <link rel="stylesheet" href="{% static '/assets/css/bootstrap.min.css' %}">
+   <link rel="stylesheet" href="{% static '/assets/css/dripicons.css' %}">
+   <link rel="stylesheet" href="{% static '/assets/css/animate.css' %}">
+   <link rel="stylesheet" href="{% static '/assets/css/slick.css' %}">
+   <link rel="stylesheet" href="{% static '/assets/css/style.css' %}">
+   <link rel="stylesheet" href="{% static '/assets/css/responsive.css' %}">
+   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&amp;display=swap" rel="stylesheet">
+   <link rel="shortcut icon" href="{% static '/assets/images/favicon.png' %}" type="image/x-icon">
+   <link rel="icon" href="{% static '/assets/images/favicon.png' %}" type="image/x-icon">
+   <script src="{% static '/assets/js/modernizr.js' %}"></script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar-default" data-offset="100">
+   <div id="loading-page">
+      <div id="loading-center-page">
+         <div id="loading-center-absolute">
+            <div class="loader"></div>
+         </div>
+      </div>
+   </div>
+   <div class="warpper clearfix">
+      <header class="navbar-header">
+         <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+               <a class="navbar-brand" href="#">
+                  <img src="assets/images/logo.svg" class="logo" alt="">
+               </a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon dripicons-menu"></span>
+               </button>
+               <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                  <ul class="navbar-nav mr-auto ml-5">
+                     <li class="nav-item active">
+                        <a data-scroll="" class="nav-link section-scroll" href="{% url 'principal' %}">Inicio</a>
+                     </li>
+                     <li class="nav-item">
+                        <a data-scroll="" class="nav-link section-scroll" href="{% url 'inscripcion_nuevo' %}">Inscripcion</a>
+                     </li>
+
+                     <li class="nav-item">
+                        <a data-scroll="" class="nav-link section-scroll" href="{% url 'inscripcion_lista' %}">Lista de alumnos</a>
+                     </li>
+                  </ul>
+
+
+
+               </div>
+            </div>
+         </nav>
+      </header>
+      <section id="home" class="pd-tp-100 hero">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6 col-xs-12 col-sm-6">
+                  <div class="hero-text text-left">
+                     <h2>
+Menu Inicio</h2>
+
+
+                  </div>
+               </div>
+
+               <div class="col-md-6 col-xs-12 col-sm-6">
+                  <img src="assets/images/image2.svg" alt="">
+               </div>
+            </div>
+         </div>
+      </section>
+      <section id="about" class="pd-tp-100 pd-bt-150">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6 col-12 wow slideInLeft">
+                  <img src="assets/images/image3.svg" alt="">
+               </div>
+
+               <div class="col-md-6 pl-5 pr-4">
+                  <div class="block-text">
+
+
+                     <h2>¿Cuál es la importancia de aprender cursos nuevos?</h2>
+                     <p>#1 Te permite crecer como persona, así como desarrollarte profesionalmente</p>
+                     <p class="mb-4">#2 Aprender algo nuevo te da acceso a nuevas y diferentes oportunidades, que quizás sean las mejores que hayas probado. Te estás perdiendo muchas cosas buenas si no sigues aprendiendo.</p>
+
+                     <a href="http://127.0.0.1:8000/inscripcion/nuevo/" class="btn btn-primary">Inscribete</a>
+
+                  </div>
+               </div>
+
+            </div>
+         </div>
+      </section>
+
+
+
+
+
+
+
+
+   </div>
+
+   <footer class="footer ">
+      <div class="footer-warpper ">
+         <div class="footer-top">
+            <div class="container ">
+
+               <div class="newsletter-block text-center">
+
+
+                  <div class="subscribe-form ">
+
+                  </div>
+               </div>
+
+            </div>
+         </div>
+
+         <div class="footer-bottom ">
+            <div class="container">
+               <div class="row">
+
+                  <div class="col-md-5 text-right">
+                     <ul class="menu-list">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                     </ul>
+                  </div>
+                  <div class="col-md-2 text-center">
+                     <a class="navbar-brand" href="#">
+                        <img src="assets/images/logo.svg" class="logo" alt="">
+                     </a>
+                  </div>
+
+                  <div class="col-md-5">
+                     <ul class="menu-list">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"> </a></li>
+                     </ul>
+                  </div>
+
+               </div>
+
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="text-center copyright">
+                        <p>Eric Waldemar Macario Ventura  201308061</p>
+                     </div>
+                  </div>
+               </div>
+
+            </div>
+
+         </div>
+
+      </div>
+   </footer>
+   <script src="{% static '/assets/js/jquery-3.3.1.min.js' %}"></script>
+   <script src="{% static '/assets/js/bootstrap.min.js' %}"></script>
+   <script src="{% static '/assets/js/jquery-latest.min.js' %}"></script>
+   <script src="{% static '/assets/js/jquery.easing.js' %}"></script>
+   <script src="{% static '/assets/js/wow.min.js' %}"></script>
+   <script src="{% static '/assets/js/slick.min.js' %}"></script>
+   <script src="{% static '/assets/js/jquery.scrollUp.min.js' %}"></script>
+   <script src="{% static '/assets/js/jquery.ajaxchimp.min.js' %}"></script>
+
+   <script src="{% static '/assets/js/main.js' %}"></script>
+</body>

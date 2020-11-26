@@ -8,16 +8,16 @@ def principal(request):
 
 def inscripcion_nuevo(request):
     if request.method == "POST":
-        formulario = EventoForm(request.POST)
+        formulario = EstudianteForm(request.POST)
         if formulario.is_valid():
             estudiante = Estudiante.objects.create(nombre=formulario.cleaned_data['nombre'], telefono=formulario.cleaned_data['telefono'], direccion=formulario.cleaned_data['direccion'])
             for curso_id in request.POST.getlist('cursos'):
                 inscribir = Inscribir(curso_id=curso_id, estudiante_id=estudiante.id)
-                alquiler.save()
+                inscribir.save()
             messages.add_message(request, messages.SUCCESS, 'Estudiante Guardado')
-            formulario = EventoForm()
+            formulario = EstudianteForm()
     else:
-        formulario = EventoForm()
+        formulario = EstudianteForm()
     return render(request, 'inscripcion/inscripcion_nuevo.html', {'formulario':formulario})
 
 def inscripcion_lista(request):
